@@ -1,0 +1,33 @@
+{
+  "name": "protractor-skeleton",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist/ && tsc",
+    "test": "npm run cleanup && npm run build && npm run update-driver && webdriver-manager start --detach && protractor protractor.config && npm run cleanup",
+    "update-driver": "webdriver-manager update",
+    "cleanup": "npx kill-port 4444"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outbrain/protractor-skeleton.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/outbrain/protractor-skeleton/issues"
+  },
+  "homepage": "https://github.com/outbrain/protractor-skeleton#readme",
+  "dependencies": {
+    "@types/jasmine": "^3.5.2",
+    "@types/node": "^13.7.0",
+    "@types/protractor": "^4.0.0",
+    "chromedriver": "latest",
+    "geckodriver": "latest",
+    "jasmine": "^3.5.0",
+    "protractor": "^5.4.3",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5"
+  }
+}
