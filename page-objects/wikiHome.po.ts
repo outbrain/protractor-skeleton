@@ -30,9 +30,8 @@ class WikiHomePage {
         await this.searchThirdResult.click();
     }
 
-    async verifyTextHeader(value: string) {
-        browser.pause()
-        await expect(this.verifyHeader.getText()).toContain(value);
+    verifyTextHeader(value: string) {
+        expect(this.verifyHeader.getText()).toContain(value);
     }
 }
 
