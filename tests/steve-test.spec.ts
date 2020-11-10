@@ -1,10 +1,10 @@
 import { wikiHomePage  } from '../page-objects/wikiHome.po'
+const whatToSearch: string = "javascript";
 
 describe('Wikipedia Search',  () => {
     it('should do a search', async ()  => {
       wikiHomePage.navigate();
-      wikiHomePage.typeSearch('guitar music');
+      wikiHomePage.typeSearch(whatToSearch);
       wikiHomePage.clickOnThirdResult();
-      wikiHomePage.verifyTextHeader("Leon Koudelak");
     });
   });

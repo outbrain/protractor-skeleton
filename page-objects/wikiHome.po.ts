@@ -27,11 +27,9 @@ class WikiHomePage {
 
     async clickOnThirdResult() {
         browser.pause()
+        const searchText: any = this.searchThirdResult.getText();
         await this.searchThirdResult.click();
-    }
-
-    verifyTextHeader(value: string) {
-        expect(this.verifyHeader.getText()).toContain(value);
+        expect(this.verifyHeader.getText()).toContain(searchText);
     }
 }
 
