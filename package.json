@@ -22,11 +22,10 @@
   "dependencies": {
     "@types/jasmine": "^3.5.2",
     "@types/node": "^13.7.0",
-    "@types/protractor": "^4.0.0",
     "chromedriver": "latest",
     "geckodriver": "latest",
     "jasmine": "^3.5.0",
-    "protractor": "^5.4.3",
+    "protractor": "^7.0.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5"
   }
