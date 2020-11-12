@@ -25,11 +25,17 @@ class WikiHomePage {
         await this.searchButton.click();
     }
 
-    async clickOnThirdResult() {
+    async getThirdResultTextLink() {
         browser.pause()
-        const searchText: any = this.searchThirdResult.getText();
+        return this.searchThirdResult.getText();
+    }
+
+    async clickOnThirdResult() {
         await this.searchThirdResult.click();
-        expect(this.verifyHeader.getText()).toContain(searchText);
+    }
+
+    async compareTextResultToPageTitle(value: any) {
+        expect(this.verifyHeader.getText()).toContain(value);
     }
 }
 
